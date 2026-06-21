@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olympuscenter</title>
+    <link rel="stylesheet" href="\CSS\EstiloCSS.css">
+    <script src="\SCRIPT\script.js"></script>
+    <script src="../SCRIPT/Funciones.js"></script>
+    <script src="\SCRIPT\scriptLogin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="\SCRIPT\chatbot.js"></script>
+    <script src="\SCRIPT\Carrito.js"></script>
+</head>
+
+
+<body>
+  <!--Cabezera Principal-->
+    <header>
+        <h1 class="logo-title">OLYMPUS <span>CENTER</span></h1>
+        <a href="\PRINCIPAL\index.html">
+        <img src="\IMG/LOGO/logo1.png" alt="Olympus Center Logo">
+        </a>
+
+        
+
+            <!--Barra buscador-->
+            <input type="text" id="buscar" placeholder="Escribe algo...">
+            <button class="boton-busqueda" onclick="buscarElemento()"> Buscar</button>
+             
+        <div class="menu-toggle" id="navbarToggle">☰</div>
+
+       <!-- Barra login Y carrito  -->
+        <div class="header-right">
+            <span class="header-divider">|</span>
+            <a href="\PRINCIPAL\login.html" class="account-link">micuentav</a>
+            <div class="cart-icon" onclick="toggleCart()">
+                <span class="material-icons">🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    
+    </header>
+
+
+    <!--Navegacion-->
+    <nav>
+        <ul>
+
+            <li><a href="\PRINCIPAL\Nosotros.html">Nosotros</a></li>
+            <li><a href="\PRINCIPAL\Marcas.html">Marcas Aliadas</a></li>
+            <li><a href="\PRINCIPAL\#">Pc Completa</a></li>
+            <li><a href="\PRINCIPAL\#">Contactano</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menú</h3>
+            <span class="close-btn" id="closeSidebar">×</span>
+        </div>
+        <div class="sidebar-menu">
+            <a href="\PRINCIPAL\index.html" class="active">🏠 Inicio</a>
+            <a href="\COMPONENTES\Almacenamiento.html">Almacenamiento</a>
+            <a href="\COMPONENTES\Case.html">Case</a>
+            <a href="\COMPONENTES\Cooler.html">Cooler</a>
+            <a href="\COMPONENTES\Fuente.html">Fuente </a>
+            <a href="\COMPONENTES\MemoriaRam.html">Memoria Ram</a>
+            <a href="\COMPONENTES\Placa.html">Placa </a>
+            <a href="\COMPONENTES\Procesadores.html">Procesadores </a>
+            <a href="\COMPONENTES\Tarjeta.html">Tarjeta Grafica</a>
+        </div>
+    </div>
+
+
+    <!-- IMAGENES -->
+    <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG\Almacenamiento\case-portable-hitsemi-usb-3-2-type-c.png" alt="Procesador Ryzen 9">
+            </div>
+            <div class="product-info">
+                <span class="product-category">PROCESADORES</span>
+                <h3 class="product-name">AMD Ryzen 9 5950X</h3>
+                <div class="product-price">S/2,499.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG\Almacenamiento\disco-duro-seagate-barracuda-1tb.png" alt="Tarjeta Gráfica RTX 3080">
+            </div>
+            <div class="product-info">
+                <span class="product-category">TARJETAS GRÁFICAS</span>
+                <h3 class="product-name">NVIDIA RTX 3080 Ti</h3>
+                <div class="product-price">S/5,299.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/ssd-hiksemi-future-lite-512gb-m-2-pcie-4.png" alt="Memoria RAM DDR5">
+            </div>
+            <div class="product-info">
+                <span class="product-category">MEMORIA RAM</span>
+                <h3 class="product-name">Corsair Dominator DDR5 32GB</h3>
+                <div class="product-price">S/899.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/ssd-kingston-fury-renegade-1tb-m-22-pc.png" alt="SSD NVMe">
+            </div>
+            <div class="product-info">
+                <span class="product-category">ALMACENAMIENTO</span>
+                <h3 class="product-name">Samsung 980 Pro 2TB</h3>
+                <div class="product-price">S/1,199.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Producto 5-->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/ssd-kingston-kc3000-2tb-m-2-pcie-4-0-nv.png" alt="SSD NVMe">
+            </div>
+            <div class="product-info">
+                <span class="product-category">ALMACENAMIENTO</span>
+                <h3 class="product-name">Samsung 980 Pro 2TB</h3>
+                <div class="product-price">S/1,199.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/ssd-externo-adata-se800-500gb-usb-3-2-g.png" alt="SSD NVMe">
+            </div>
+            <div class="product-info">
+                <span class="product-category">ALMACENAMIENTO</span>
+                <h3 class="product-name">Samsung 980 Pro 2TB</h3>
+                <div class="product-price">S/1,199.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/case-portable-hitsemi-usb-3-2-type-c.png" alt="SSD NVMe">
+            </div>
+            <div class="product-info">
+                <span class="product-category">ALMACENAMIENTO</span>
+                <h3 class="product-name">Samsung 980 Pro 2TB</h3>
+                <div class="product-price">S/1,199.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="\IMG/Almacenamiento/ssd-externo-adata-se800-500gb-usb-3-22222-g.png" alt="SSD NVMe">
+            </div>
+            <div class="product-info">
+                <span class="product-category">ALMACENAMIENTO</span>
+                <h3 class="product-name">Samsung 980 Pro 2TB</h3>
+                <div class="product-price">S/1,199.00</div>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--CHAT BOT-->
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">chat</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <div class="chatbot">
+        <header>
+            <h2>Asistente Virtual</h2>
+        </header>
+        <ul class="chatbox"></ul>
+        <div class="chat-input">
+            <textarea placeholder="Escribe un mensaje..." required></textarea>
+            <span id="sent-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+
+          <!-- Carrito de compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>TU PEDIDO</h2>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">No hay productos en el carrito</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">PROCESAR PEDIDO</button>
+        </div>
+    </div>
+</body>
+
+<!--Pie de Pagina-->
+ <footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-section social-videos">
+        <h2 class="footer-title">CONÓCENOS</h2>
+        <div class="social-video-container">
+          <div class="social-video">
+            <h3>TIKTOK</h3>
+            <img src="\IMG\LOGO\tiktok.png" alt="TikTok logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\tiktok.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="social-video">
+            <h3>Facebook</h3>
+            <img src="\IMG\LOGO\facebook.png" alt="Facebook logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\facebook.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <div class="footer-section location">
+        <h3>Ubícanos</h3>
+        <div class="location-map">
+          <a href="https://maps.app.goo.gl/JqXmXfQJWLqYwj8S7" class="map-link">
+            <img src="\IMG\Promociones\ubi.png" alt="Ubicación" class="map-image">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contáctanos</h3>
+        <div class="phone-numbers">
+          <p>+51 946 087 675</p>
+          <p>+51 946 087 450</p>
+          <p>+51 946 087 602</p>
+        </div>
+      </div>
+
+      <div class="footer-section legal">
+        <h3>Legal</h3>
+        <a href="Terminos.html" class="legal-link">Términos y condiciones</a>
+      </div>
+
+      <div class="footer-section social-media">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/tiktok.png" alt="TikTok" class="social-icon">
+            <span>TikTok</span>
+          </a>
+          <a href="https://wa.me/51946087675" target="_blank" class="social-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://facebook.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/facebook.png" alt="Facebook" class="social-icon">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>Derechos de autor © 2025 - OLYMPUS CENTER</p>
+    </div>
+  </div>
+</footer>
+
+</html>

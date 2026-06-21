@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlympusCenter</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Encabezado con logo y buscador -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">OlympusCenter</h1>
+            <p class="slogan">Tu tienda de confianza para hardware de computadoras</p>
+            <form class="search-form" action="/buscar" method="get">
+                <input type="search" name="q" placeholder="Buscar componentes...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Procesadores</a></li>
+            <li><a href="#">Tarjetas Gráficas</a></li>
+            <li><a href="#">Memoria RAM</a></li>
+            <li><a href="#">Almacenamiento</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <section class="featured">
+            <h2 class="section-title">Ofertas Destacadas</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="images/intel-i9.jpg" alt="Intel i9" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Procesador Intel Core i9-13900K</h3>
+                        <p class="product-specs">24 núcleos / 5.8 GHz Turbo</p>
+                        <p class="product-price"><strong>$599.99</strong> <span class="old-price">$699.99</span></p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/rtx-4080.jpg" alt="RTX 4080" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Tarjeta Gráfica NVIDIA RTX 4080</h3>
+                        <p class="product-specs">16GB GDDR6X - DLSS 3</p>
+                        <p class="product-price"><strong>$1,199.99</strong> <span class="old-price">$1,299.99</span></p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2 class="section-title">Categorías Principales</h2>
+            <ul class="categories-list">
+                <li><a href="#">Procesadores (CPU)</a></li>
+                <li><a href="#">Tarjetas Gráficas (GPU)</a></li>
+                <li><a href="#">Placas Base</a></li>
+                <li><a href="#">Memoria RAM</a></li>
+                <li><a href="#">SSD & HDD</a></li>
+                <li><a href="#">Fuentes de Poder</a></li>
+            </ul>
+        </section>
+
+        <section class="brands">
+            <h2 class="section-title">Marcas Populares</h2>
+            <div class="brands-grid">
+                <img src="images/intel-logo.png" alt="Intel" class="brand-logo">
+                <img src="images/amd-logo.png" alt="AMD" class="brand-logo">
+                <img src="images/nvidia-logo.png" alt="NVIDIA" class="brand-logo">
+                <img src="images/corsair-logo.png" alt="Corsair" class="brand-logo">
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Email: ventas@pccomponentes.com</p>
+                <p>Teléfono: +1 234 567 890</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PCComponentes - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

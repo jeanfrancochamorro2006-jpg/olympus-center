@@ -1,0 +1,140 @@
+/* Reinicio de márgenes y configuración general de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variables globales de color (estilo inspirado en Dragon Ball) */
+
+
+/* Estilo del contenedor principal del login */
+.container {
+    background: var(--db-black);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--db-orange);
+    width: 350px;
+}
+
+/* Estilo general para inputs y botones */
+input,
+.boton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo específico de los inputs */
+input {
+    background: var(--db-gray-dark);
+    color: var(--db-white);
+}
+
+/* Botón principal: color naranja, texto blanco y animación al pasar el mouse */
+.boton {
+    background: var(--db-orange);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Oscurece el botón al pasar el mouse */
+.boton:hover {
+    background: var(--db-orange-dark);
+}
+
+/* Estilo para los enlaces */
+a {
+    color: var(--db-orange-dark);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Caja para recuperar contraseña, inicialmente oculta */
+#recuperarBox {
+    display: none;
+    margin-top: 10px;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--db-orange);
+}
+
+/* Espaciado superior para inputs dentro del cuadro de recuperación */
+#recuperarBox input {
+    margin-top: 5px;
+}
+
+/* Mensaje de recuperación con texto centrado y color verde claro */
+#mensajeRecuperacion {
+    color: lightgreen;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Contenedor del menú de usuario (ícono de cuenta) en esquina superior derecha */
+.user-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Estilo del ícono de usuario */
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--db-gray-dark);
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Cambio de color al pasar el mouse sobre el ícono */
+.user-icon:hover {
+    background-color: #444;
+}
+
+/* Menú desplegable oculto inicialmente, con opciones según sesión */
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: var(--db-black);
+    border: 1px solid var(--db-orange);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo de los enlaces dentro del menú desplegable */
+.user-dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Fondo naranja al pasar el mouse sobre las opciones del menú */
+.user-dropdown a:hover {
+    background-color: var(--db-orange);
+}
+
+/* Centrado vertical y horizontal del contenido en toda la pantalla */
+.centrado {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--db-black);
+    color: var(--db-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante | Olympus Center</title>
+    <link rel="stylesheet" href="\CSS\EstiloCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="\SCRIPT\Carrito.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Cabezera Principal-->
+
+    <header>
+        <h1 class="logo-title">OLYMPUS <span>CENTER</span></h1>
+        <a href="\PRINCIPAL\index.html">
+            <img src="\IMG/LOGO/logo1.png" alt="Olympus Center Logo">
+        </a>
+
+        <div class="header-right">
+            <span class="header-divider">|</span>
+            <span><a href="\PRINCIPAL\login.html" class="account-link">Iniciar Sesion</a></span>
+        </div>
+        </div>
+
+    </header>
+
+    <!-- Comprobante -->
+    <main class="receipt-container" id="Comprobante">
+        <div class="receipt">
+            <div class="receipt-header">
+                <h2>COMPROBANTE DE PAGO</h2>
+                <p id="receiptDate"></p>
+                <p id="receiptNumber">Orden #<span id="orderNumber"></span></p>
+            </div>
+
+            <div class="receipt-body">
+                <div class="receipt-info">
+                    <div>
+                        <h3>Cliente</h3>
+                        <p id="customerName"></p>
+                        <p id="customerEmail"></p>
+                    </div>
+
+                    <div>
+                        <h3>Dirección</h3>
+                        <p id="customerAddress"></p>
+                    </div>
+
+                    <div>
+                        <h3>Método de pago</h3>
+                        <p id="paymentMethod"></p>
+                    </div>
+                </div>
+
+                <div class="receipt-items">
+                    <h3>Detalle del pedido</h3>
+                    <table id="receiptItems">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los items se agregarán aquí dinámicamente -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">IGV (18%)</td>
+                                <td id="receiptIGV">S/0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Descuento (15%)</td>
+                                <td id="receiptDescuento">S/0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">TOTAL</td>
+                                <td id="receiptTotal">S/0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="receipt-footer">
+                <p>¡Gracias por tu compra!</p>
+                <p>Para cualquier consulta, contacta a soporte@Olympus-Center.com</p>
+                <button onclick="printReceipt()" class="print-btn">IMPRIMIR COMPROBANTE</button>
+                <button onclick="downloadPDF()" class="print-btn">DESCARGAR PDF</button>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+</body>
+
+</html>

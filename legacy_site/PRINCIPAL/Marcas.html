@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olympuscenter</title>
+    <link rel="stylesheet" href="\CSS\EstiloCSS.css">
+    <script src="\SCRIPT\script.js"></script>
+    <script src="../SCRIPT/Funciones.js"></script>
+    <script src="\SCRIPT\scriptLogin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="\SCRIPT\chatbot.js"></script>
+    <script src="\SCRIPT\Carrito.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!--Cabezera Principal-->
+    <header>
+        <h1 class="logo-title">OLYMPUS <span>CENTER</span></h1>
+        <a href="index.html">
+        <img src="\IMG/LOGO/logo1.png" alt="Olympus Center Logo">
+        </a>
+
+        
+
+            <!--Barra buscador-->
+            <input type="text" id="buscar" placeholder="Escribe algo...">
+            <button class="boton-busqueda" onclick="buscarElemento()"> Buscar</button>
+             
+        <div class="menu-toggle" id="navbarToggle">☰</div>
+
+       <!-- Barra login Y carrito  -->
+        <div class="header-right">
+            <span class="header-divider">|</span>
+            <span><a href="login.html" class="account-link">Iniciar Sesion</a></span>
+            <div class="cart-icon" onclick="toggleCart()">
+                <span class="material-icons">🛒</span>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    
+    </header>
+
+  <!--Navegacion-->
+    <!--Navegacion-->
+    <nav>
+        <ul>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="#">Marcas Aliadas</a></li>
+            <li><a href="#Productos">Pc Completa</a></li>
+            <li><a href="#Contactanos">Conocenos</a></li>
+        </ul>
+    </nav>
+
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Menú</h3>
+      <span class="close-btn" id="closeSidebar">×</span>
+    </div>
+    <div class="sidebar-menu">
+      <a href="\PRINCIPAL\index.html" class="active">🏠 Inicio</a>
+      <a href="\COMPONENTES\Almacenamiento.html">Almacenamiento</a>
+      <a href="\COMPONENTES\Case.html">Case</a>
+      <a href="\COMPONENTES\Cooler.html">Cooler</a>
+      <a href="\COMPONENTES\Fuente.html">Fuente </a>
+      <a href="\COMPONENTES\MemoriaRam.html">Memoria Ram</a>
+      <a href="\COMPONENTES\Placa.html">Placa </a>
+      <a href="\COMPONENTES\Procesadores.html">Procesadores </a>
+      <a href="\COMPONENTES\Tarjeta.html">Tarjeta Grafica</a>
+    </div>
+  </div>
+
+
+     <!--SECCION MARCAS ALIADAS-->
+    <section>
+        <div class="section-title" id= "Marcas">
+            <h2>MARCAS ALIADAS</h2>
+        </div>
+
+        <div class="products-grid">
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="https://imgs.search.brave.com/agOEPylvP1obPBZlh1Xy-mMdlcHeoNN4wMDseM6MPV8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vTGpkVjhT/Smhvdlh0NU5aRkFT/MDNRSklodzZlOWZy/VFJpODdiWG1OMDIy/Zy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlq/Wkc0dS9ZbkpoYm1S/bVpYUmphQzVwL2J5/OXBaRzVPT0V0a1lr/dGgvTDNjdk5EQXdM/Mmd2TkRBdy9MM1Jv/WlcxbEwyUmhjbXN2/L2FXTnZiaTVxY0dW/blAyTTkvTVdKNGFX/UTJORTExY0RkaC9Z/M3BsZDFOQldVMVlK/blE5L01UWTNPVFEy/TlRRME1EVTQvTXc"
+          alt="AMD" loading="lazy">
+      </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Nvidia-Logo-2006-present.jpg" alt="NVIDIA"
+          alt="AMD" loading="lazy">
+      </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo-1995-present.png" alt="ASUS"
+          alt="AMD" loading="lazy">
+      </a>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://th.bing.com/th/id/OIP.hjmNNeflrgby4GCJ3IhsAAHaEK?cb=iwc2&rs=1&pid=ImgDetMain" alt="MSI"
+          alt="AMD" loading="lazy">
+      </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Gigabyte-Logo.png" alt="Gigabyte" loading="lazy">
+         
+      </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://1000logos.net/wp-content/uploads/2020/06/ASRock-logo.jpg" alt="ASRock" loading="lazy">
+        
+      </a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+      <a href="https://www.amd.com/es/support/download/drivers.html" class="brand-card" target="_blank"
+        rel="noopener noreferrer">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/Kingston-Emblem.png" alt="Kingston" loading="lazy">
+         
+      </a>
+            </div>
+        </div>
+             
+            
+        </div>
+    </section>
+
+  <!--CHAT BOT-->
+  <button class="chatbot-toggler">
+    <span class="material-symbols-outlined">chat</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+
+  <div class="chatbot">
+    <header>
+      <h2>Asistente Virtual</h2>
+    </header>
+    <ul class="chatbox"></ul>
+    <div class="chat-input">
+      <textarea placeholder="Escribe un mensaje..." required></textarea>
+      <span id="sent-btn" class="material-symbols-outlined">send</span>
+    </div>
+  </div>
+
+   <!-- Carrito de compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>TU PEDIDO</h2>
+            <button class="close-btn" onclick="toggleCart()">×</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">No hay productos en el carrito</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="cartTotal">S/0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">PROCESAR PEDIDO</button>
+        </div>
+    </div>
+</body>
+
+
+<!--Pie de Pagina-->
+ <footer>
+  <div class="footer-container" id="Contactanos">
+    <div class="footer-top">
+      <div class="footer-section social-videos">
+        <h2 class="footer-title">CONÓCENOS</h2>
+        <div class="social-video-container">
+          <div class="social-video">
+            <h3>TIKTOK</h3>
+            <img src="\IMG\LOGO\tiktok.png" alt="TikTok logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\tiktok.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="social-video">
+            <h3>Facebook</h3>
+            <img src="\IMG\LOGO\facebook.png" alt="Facebook logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\facebook.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <div class="footer-section location">
+        <h3>Ubícanos</h3>
+        <div class="location-map">
+          <a href="https://maps.app.goo.gl/JqXmXfQJWLqYwj8S7" class="map-link">
+            <img src="\IMG\Promociones\ubi.png" alt="Ubicación" class="map-image">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contáctanos</h3>
+        <div class="phone-numbers">
+          <p>+51 946 087 675</p>
+          <p>+51 946 087 450</p>
+          <p>+51 946 087 602</p>
+        </div>
+      </div>
+
+      <div class="footer-section legal">
+        <h3>Legal</h3>
+        <a href="Terminos.html" class="legal-link">Términos y condiciones</a>
+      </div>
+
+      <div class="footer-section social-media">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/tiktok.png" alt="TikTok" class="social-icon">
+            <span>TikTok</span>
+          </a>
+          <a href="https://wa.me/51946087675" target="_blank" class="social-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://facebook.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/facebook.png" alt="Facebook" class="social-icon">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>Derechos de autor © 2025 - OLYMPUS CENTER</p>
+    </div>
+  </div>
+</footer>
+
+
+</html>

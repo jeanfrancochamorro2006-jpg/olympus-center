@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registrarse</title>
+    <!-- Enlace al archivo de estilos CSS principal -->
+    <link rel="stylesheet" href="../CSS/EstiloCSS.css">
+</head>
+
+<body>
+
+    <!-- Sección centrada para el formulario de registro -->
+    <div class="centrado">
+        <div class="container">
+
+            <h2>Crear cuenta</h2>
+
+            <!-- Campo para ingresar el nombre completo -->
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+            <!-- Campo para ingresar el nombre de usuario -->
+            <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+
+            <!-- Campo para ingresar el correo electrónico -->
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+
+            <!-- Campo para ingresar la contraseña -->
+            <input type="password" id="clave" placeholder="Contraseña" required>
+
+            <!-- Campo para confirmar la contraseña -->
+            <input type="password" id="confirmar" placeholder="Confirmar contraseña" required>
+
+            <!-- Botón que ejecuta la función registrar() al hacer clic -->
+            <button class="boton-registro" onclick="registrar()">Registrar</button>
+
+            <!-- Enlace para ir a la página de inicio de sesión si ya existe una cuenta -->
+            <a href="Login.html">¿Ya tienes cuenta? Inicia sesión</a>
+
+        </div>
+    </div>
+
+    <!-- Enlace al script que contiene la lógica de registro -->
+    <script src="../SCRIPT/scriptRegistro.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>olympuscenter</title>
+    <link rel="stylesheet" href="\CSS\EstiloCSS.css">
+    <script src="\SCRIPT\script.js"></script>
+    <script src="../SCRIPT/Funciones.js"></script>
+    <script src="\SCRIPT\scriptLogin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="\SCRIPT\chatbot.js"></script>
+    <script src="\SCRIPT\Carrito.js"></script>
+</head>
+
+ <header>
+        <h1 class="logo-title">OLYMPUS <span>CENTER</span></h1>
+        <a href="index.html">
+        <img src="\IMG/LOGO/logo1.png" alt="Olympus Center Logo">
+        </a>
+
+
+    </header>
+
+<body>
+
+   
+        <div class="section-title">
+            <h2>TERMINOS Y CONDICIONES</h2>
+        </div>
+    <section>
+        <h2>Aceptación de los Términos</h2>
+        <p>Al acceder y utilizar este sitio web, usted acepta estar sujeto a estos términos y condiciones de uso.</p>
+    </section>
+    
+    <section>
+        <h2>Uso del Sitio</h2>
+        <p>Este sitio está destinado para uso personal y no comercial. No puede modificar, copiar o distribuir el contenido sin autorización.</p>
+    </section>
+    
+    <section>
+        <h2>Propiedad Intelectual</h2>
+        <p>Todos los contenidos, logotipos y materiales son propiedad de la empresa y están protegidos por leyes de derechos de autor.</p>
+    </section>
+    
+    <section>
+        <h2>Limitación de Responsabilidad</h2>
+        <p>No nos hacemos responsables por daños directos, indirectos o incidentales resultantes del uso de este sitio.</p>
+    </section>
+    
+    <section>
+        <h2>Modificaciones</h2>
+        <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación.</p>
+    </section>
+    
+    
+</body>
+
+<style>
+    /* SECCIÓN TÉRMINOS Y CONDICIONES */
+/* TÉRMINOS Y CONDICIONES */
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+  color: var(--db-blue);
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--db-orange);
+  bottom: 0;
+  left: 0;
+}
+
+section p {
+  color: var(--db-black);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Numeración automática para las secciones */
+section {
+  counter-increment: section-counter;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+section h2::before {
+  content: counter(section-counter) ".";
+  position: absolute;
+  left: -3.5rem;
+  top: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--db-orange);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+    padding-left: 3.5rem;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  section h2::before {
+    left: -2.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 2.5rem;
+  }
+  
+  section h2::before {
+    left: -1.8rem;
+  }
+}
+</style>
+</html>
+
+
+<!--Pie de Pagina-->
+ <footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-section social-videos">
+        <h2 class="footer-title">CONÓCENOS</h2>
+        <div class="social-video-container">
+          <div class="social-video">
+            <h3>TIKTOK</h3>
+            <img src="\IMG\LOGO\tiktok.png" alt="TikTok logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\tiktok.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="social-video">
+            <h3>Facebook</h3>
+            <img src="\IMG\LOGO\facebook.png" alt="Facebook logo" class="social-icon">
+            <video width="360" height="180" controls>
+              <source src="\VIDEO\facebook.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <div class="footer-section location">
+        <h3>Ubícanos</h3>
+        <div class="location-map">
+          <a href="https://maps.app.goo.gl/JqXmXfQJWLqYwj8S7" class="map-link">
+            <img src="\IMG\Promociones\ubi.png" alt="Ubicación" class="map-image">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contáctanos</h3>
+        <div class="phone-numbers">
+          <p>+51 946 087 675</p>
+          <p>+51 946 087 450</p>
+          <p>+51 946 087 602</p>
+        </div>
+      </div>
+
+      <div class="footer-section legal">
+        <h3>Legal</h3>
+        <a href="Terminos.html" class="legal-link">Términos y condiciones</a>
+      </div>
+
+      <div class="footer-section social-media">
+        <h3>Redes Sociales</h3>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/tiktok.png" alt="TikTok" class="social-icon">
+            <span>TikTok</span>
+          </a>
+          <a href="https://wa.me/51946087675" target="_blank" class="social-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="social-icon">
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://facebook.com/tuPagina" target="_blank" class="social-link">
+            <img src="/IMG/LOGO/facebook.png" alt="Facebook" class="social-icon">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>Derechos de autor © 2025 - OLYMPUS CENTER</p>
+    </div>
+  </div>
+</footer>
+

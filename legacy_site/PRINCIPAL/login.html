@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <!-- Enlace al archivo de estilos CSS principal -->
+    <link rel="stylesheet" href="../CSS/EstiloCSS.css">
+</head>
+
+<body>
+
+    <div class="centrado">
+        <div class="container">
+            <div class="login-container">
+
+                <h2>Iniciar Sesión</h2>
+
+                <!-- Campo para ingresar el nombre de usuario -->
+                <input type="text" id="usuario" placeholder="Usuario">
+
+                <!-- Campo para ingresar la contraseña -->
+                <input type="password" id="clave" placeholder="Contraseña">
+
+                <!-- Botón que ejecuta la función iniciarSesion() al hacer clic -->
+                <button class="boton" onclick="iniciarSesion()">Entrar</button>
+
+                <!-- Enlace para mostrar el formulario de recuperación de contraseña -->
+                <a href="#" onclick="mostrarRecuperacion()">¿Olvidaste tu contraseña?</a>
+
+                <!-- Enlace que lleva a la página de registro -->
+                <a href="registro.html">¿No tienes cuenta? Regístrate</a>
+
+                <!-- Contenedor del formulario de recuperación de contraseña (inicialmente oculto) -->
+                <div id="recuperarBox">
+                    <!-- Campo para ingresar el usuario registrado -->
+                    <input type="text" id="recuperarUsuario" placeholder="Tu nombre de usuario">
+                    <!-- Botón que ejecuta la función recuperarContrasena() al hacer clic -->
+                    <button class="boton" onclick="recuperarContrasena()">Enviar correo</button>
+                </div>
+
+                <!-- Elemento donde se mostrará el mensaje de éxito o error de recuperación -->
+                <p id="mensajeRecuperacion"></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga el archivo JavaScript con las funciones de login y recuperación -->
+    <script src="../SCRIPT/scriptLogin.js"></script>
+
+</body>
+</html>

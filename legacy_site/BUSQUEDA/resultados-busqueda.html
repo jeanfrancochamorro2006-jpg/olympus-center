@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - Olympus Center</title>
+    <!-- Incluye los mismos estilos y scripts que en tu página principal -->
+    <link rel="stylesheet" href="/CSS/EstiloCSS.css">
+    <script src="\SCRIPT\chatbot.js"></script>
+    <script src="\SCRIPT\busqueda.js"></script>
+        <script src="../SCRIPT/Funciones.js"></script>
+    <script src="\SCRIPT\scriptLogin.js"></script>
+      <script src="\SCRIPT\script.js"></script>
+      <script src="\SCRIPT\Carrito.js"></script>
+      
+</head> 
+<body>
+    <!-- Copia el mismo header y estructura que tu página principal -->
+        <!--Cabezera Principal-->
+  <!--Cabezera Principal-->
+  <header>
+    <h1 class="logo-title">OLYMPUS <span>CENTER</span></h1>
+    <a href="\PRINCIPAL\index.html">
+      <img src="\IMG/LOGO/logo1.png" alt="Olympus Center Logo">
+    </a>
+
+
+
+    <!--Barra buscador-->
+     <!-- Barra buscador -->
+        <form id="search-form" action="resultados-busqueda.html" method="get">
+            <input type="text" id="buscar"action="resultados-busqueda.html" method="get" name="q" placeholder="Escribe algo...">
+            <button type="submit" class="boton-busqueda">Buscar</button>
+        </form>
+
+    
+
+
+    <div class="menu-toggle" id="navbarToggle">☰</div>
+
+    <!-- Barra login Y carrito  -->
+    <div class="header-right">
+      <span class="header-divider">|</span>
+      <span><a href="login.html" class="account-link">Iniciar Sesion</a></span>
+      <div class="cart-icon" onclick="toggleCart()">
+        <span class="material-icons">🛒</span>
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+
+  </header>
+
+    <main class="search-results-container">
+        <h2>Resultados de búsqueda para: <span id="search-term"></span></h2>
+        <div id="search-results" class="products-grid">
+            <!-- Los resultados se cargarán aquí dinámicamente -->
+        </div>
+        
+        <div id="no-results" style="display: none;">
+            <p>No se encontraron resultados para tu búsqueda.</p>
+        </div>
+    </main>
+    
+    <!-- Copia el mismo footer que tu página principal -->
+      <!-- Carrito de compras -->
+  <!-- Carrito de compras -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>TU PEDIDO</h2>
+      <button class="close-btn" onclick="toggleCart()">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">No hay productos en el carrito</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>TOTAL:</span>
+        <span id="cartTotal">S/0.00</span>
+      </div>
+      <div class="cart-igv">
+        <span>IGV (18%):</span>
+        <span id="cartIGV">S/0.00</span>
+      </div>
+      <div class="cart-descuento">
+        <span>Descuento (15%):</span>
+        <span id="cartDescuento">S/0.00</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">PROCESAR PEDIDO</button>
+    </div>
+</div>
+
+ <div id="modalDescuento"
+    style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+    <div style="background:#fff; padding:0; border-radius:10px; text-align:center; max-width:90vw; position:relative; width:400px; height:300px; display:flex; align-items:center; justify-content:center;">
+        <button 
+            onclick="document.getElementById('modalDescuento').style.display='none'" 
+            style="position:absolute; top:10px; right:10px; background:transparent; border:none; font-size:2rem; cursor:pointer; color:#333;">×</button>
+        <img src="\IMG\descuento\descuento.png" alt="descuento" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+    </div>
+</div>  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (localStorage.getItem("mostrarDescuento") === "true") {
+        document.getElementById("modalDescuento").style.display = "flex";
+        localStorage.setItem("mostrarDescuento", "false");
+      }
+    });
+  </script>
+    
+</body>
+</html>

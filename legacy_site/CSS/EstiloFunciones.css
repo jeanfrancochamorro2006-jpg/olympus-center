@@ -1,0 +1,248 @@
+/*ESTILOS PARA LAS FUNCIONES*/
+
+
+/*CARRUSEL*/
+ .carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 1700px;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .carrusel-contenedor {
+        padding-bottom: 75%; /* 4:3 en móviles */
+    }
+}
+
+.carrusel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.01s ease; /* ¡TIEMPO CORREGIDO! */
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block; /* Elimina espacio bajo imágenes */
+}
+
+/* CONTROLES DE NAVEGACION */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.flecha.izquierda {
+    left: 15px;
+}
+
+.flecha.derecha {
+    right: 15px;
+}
+
+@media (max-width: 576px) {
+    .flecha {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+/* INDICADORES */
+.indicadores {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.indicador.activo {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+    .indicador {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+/*MENU LATERAL*/
+
+/* Navbar Superior */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: fixed;
+}
+
+/* Sidebar (Menú Lateral) */
+/* Navbar Superior */
+        .menu-toggle {
+            cursor: pointer;
+            font-size: 1.3rem;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+            color: var(--db-orange-dark);
+        }
+
+        /* Sidebar (Menú Lateral) */
+        .sidebar {
+            background: var(--db-black);
+            color: white;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Oculto por defecto */
+            transition: left 0.3s;
+            z-index: 1001;
+        }
+
+        .sidebar.active {
+            left: 0; /* Mostrar sidebar */
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--db-black);
+            background-color: var(--db-black);
+        }
+
+        .close-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .sidebar-menu a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar-menu a:hover {
+            background: var(--db-orange);
+            border-left: 3px solid var(--db-orange);
+        }
+
+        .sidebar-menu a.active {
+            background: var(--db-black);
+            border-left: 3px solid var(--db-orange);
+        }
+
+        .sidebar-menu i {
+            margin-right: 10px;
+            color: var(--db-orange);
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            margin-top: 60px; /* Para evitar solapamiento con el navbar */
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        .main-content.active {
+            margin-left: 250px; /* Desplazar contenido cuando el sidebar está abierto */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+                left: -200px;
+            }
+
+            .main-content.active {
+                margin-left: 200px;
+            }
+        }
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1a1a1a;
+    border: 1px solid #ff8c00;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.user-dropdown.active {
+    display: block;
+}
+
+.user-dropdown a {
+    display: block;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.user-dropdown a:hover {
+    background-color: #333;
+}

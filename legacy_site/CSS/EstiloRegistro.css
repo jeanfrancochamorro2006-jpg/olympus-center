@@ -1,0 +1,98 @@
+/* Estilo inspirado en Dragon Ball para el formulario de registro */
+
+
+
+* {
+    /* Reset general y configuración de tipografía base */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor centralizado que cubre toda la pantalla */
+.centrado {
+    background-color: var(--db-black);
+    color: var(--db-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja principal del formulario de registro */
+.container {
+    background: var(--db-black);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--db-orange);
+    width: 350px;
+    text-align: center;
+    animation: aparecer 0.5s ease-in-out;
+}
+
+/* Animación de aparición suave desde arriba */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los campos de entrada y el botón de registro */
+input,
+.boton-registro {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Fondo oscuro para los inputs y texto blanco */
+input {
+    background: var(--db-gray-dark);
+    color: var(--db-white);
+    transition: border 0.3s;
+}
+
+/* Borde naranja al enfocar un input */
+input:focus {
+    outline: none;
+    border: 2px solid var(--db-orange);
+}
+
+/* Botón con fondo naranja y efectos de interacción */
+.boton-registro {
+    background: var(--db-orange);
+    color: var(--db-white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.boton-registro:hover {
+    background: var(--db-orange-dark);
+    transform: translateY(-2px);
+}
+
+/* Estilo para enlaces de navegación */
+a {
+    color: var(--db-orange); /* antes era --db-yellow */
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* Cambio de color al pasar el mouse sobre un enlace */
+a:hover {
+    color: var(--db-orange-light); /* sigue siendo un naranja más claro */
+}
+
