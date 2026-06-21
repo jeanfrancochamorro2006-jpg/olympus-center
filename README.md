@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 OlympusCenter
 
-## Getting Started
+Tienda e-commerce especializada en **hardware y componentes de PC** (procesadores, tarjetas gráficas, placas base, almacenamiento, fuentes, cases y coolers). Construida con **Next.js 16** y **Tailwind CSS v4**.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
+
+---
+
+## ✨ Características
+
+- 🏠 **Home** con hero, carrusel automático de categorías, marcas, videos de TikTok embebidos y tiendas con Google Maps.
+- 🗂️ **Catálogo de productos** (`/productos`) con filtros (categoría, marca, precio, calificación, ofertas, envío gratis), ordenamiento, búsqueda y **paginación**.
+- 🏷️ **Ofertas** integradas como filtro dentro del catálogo.
+- 📦 **Ficha de producto** (`/producto/[id]`) con galería, selector de cantidad, especificaciones y productos relacionados.
+- 🛍️ **Carrito** funcional con persistencia en `localStorage` (cantidades, favoritos, subtotal).
+- 💳 **Checkout** con simulación de pasarela de pago (estilo Stripe), elección de **despacho a domicilio / recojo en tienda** y **boleta electrónica** imprimible (formato ticket térmico 80 mm con IGV).
+- 🏪 **Tiendas** con mapas de Google Maps y botón "Cómo llegar".
+- 🎨 Diseño **responsive** con menú móvil, tipografía retro (Press Start 2P) + Poppins e íconos de **lucide-react**.
+
+## 🧱 Stack
+
+| Tecnología | Uso |
+|---|---|
+| [Next.js 16](https://nextjs.org) (App Router) | Framework / SSR / SSG |
+| [React 19](https://react.dev) | UI |
+| [Tailwind CSS v4](https://tailwindcss.com) | Estilos |
+| [lucide-react](https://lucide.dev) | Íconos |
+| TypeScript | Tipado |
+
+## 🚀 Empezar
+
+Requiere **Node.js 18.18+**.
 
 ```bash
+# 1. Instalar dependencias
+npm install
+
+# 2. Modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Abre http://localhost:3000
+
+# 3. Build de producción
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Estructura
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+src/
+├─ app/                  # Rutas (App Router)
+│  ├─ page.tsx           # Home
+│  ├─ productos/         # Catálogo con filtros
+│  ├─ producto/[id]/     # Ficha de producto
+│  ├─ carrito/           # Carrito
+│  ├─ checkout/          # Checkout + boleta
+│  ├─ tiendas/           # Tiendas con mapas
+│  └─ ...                # nosotros, contacto, ayuda, etc.
+├─ components/           # Header, Footer, ProductCard, carrito, checkout...
+└─ lib/                  # catálogo de productos, tiendas, íconos
+public/IMG/              # Imágenes de productos y logo
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Scripts
 
-## Learn More
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm start` | Servir el build |
+| `npm run lint` | Linter (ESLint) |
 
-To learn more about Next.js, take a look at the following resources:
+## 🔐 Variables de entorno
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El chatbot legacy usa un token de Hugging Face. **Nunca lo pongas en el código.** Crea un archivo `.env.local`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+HF_TOKEN=tu_token_aqui
+```
 
-## Deploy on Vercel
+> ⚠️ El archivo `.env*` está en `.gitignore` y no se sube al repositorio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hecho con ❤️ en Perú · **OlympusCenter**
